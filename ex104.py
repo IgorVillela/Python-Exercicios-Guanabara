@@ -6,10 +6,11 @@ def leiaInt(texto):
             if isinstance(int(digito), int):
                 return digito
         except ValueError:
-            print('\033[31mERRO! Digite um número inteiro válido.\033[m')
+            print('\033[1;31mERRO! Digite um número inteiro válido.\033[m')
             continue
         break
 
 
-n = leiaInt('Digite um número: ')
+#  Programa principal
+n = leiaInt('Digite um número inteiro: ')
 print(f'Você digitou o número {n}')

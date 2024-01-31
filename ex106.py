@@ -1,6 +1,3 @@
-from time import sleep
-
-
 def titulo(texto, cor='Verde'):
     if cor == 'Verde':
         cor = '\033[1;42m'
@@ -18,11 +15,12 @@ def titulo(texto, cor='Verde'):
 
 
 def ajuda():
+    from time import sleep
     while True:
         print('\033[m', end='')
         titulo('SISTEMA DE AJUDA PyHELP')
         duvida = input('Função ou Biblioteca > ')
-        if duvida == 'fim':
+        if duvida.lower() == 'fim':
             titulo('ATÉ LOGO', cor='Vermelho')
             sleep(1)
             break
